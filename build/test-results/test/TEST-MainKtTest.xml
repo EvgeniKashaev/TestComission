@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainKtTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-04-18T18:10:03" hostname="USER" time="0.295">
+  <properties/>
+  <testcase name="testCommissionVisaMistake" classname="MainKtTest" time="0.289"/>
+  <testcase name="testCommissionVKPlay" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMaestro" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionVKPlayMistake2" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMistake" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMasterCart" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMaestroMistake" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionVisa" classname="MainKtTest" time="0.001"/>
+  <testcase name="testCommissionMirMistake" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMasterCartMistake" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionVKPlayMistake" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMir" classname="MainKtTest" time="0.001"/>
+  <testcase name="testCommissionMasterCart1" classname="MainKtTest" time="0.0"/>
+  <testcase name="testCommissionMasterCart2" classname="MainKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

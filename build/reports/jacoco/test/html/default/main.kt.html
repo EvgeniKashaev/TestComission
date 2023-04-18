@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TestComision</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">main.kt</span></div><h1>main.kt</h1><pre class="source lang-java linenums">fun main() {
+
+<span class="nc" id="L3">    println(commission(&quot;VK Play&quot;, 15001, 32))</span>
+
+<span class="nc" id="L5">}</span>
+
+<span class="fc" id="L7">fun commission(name: String = &quot;VK Play&quot;, transferAmount: Int, transferAmountMonth: Int = 0): Int {</span>
+<span class="pc bpc" id="L8" title="5 of 16 branches missed.">    when (name) {</span>
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        &quot;MasterCart&quot;, &quot;Maestro&quot;, &quot;Visa&quot;, &quot;Mir&quot; -&gt; if (maximumTransferPer(name, transferAmount, transferAmountMonth)) {</span>
+<span class="fc" id="L10">            return commissionAmount(name, transferAmount, transferAmountMonth)</span>
+        }
+
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        &quot;VK Play&quot; -&gt; if (maximumTransferPer(name, transferAmount, transferAmountMonth)) {</span>
+<span class="fc" id="L14">            return 0</span>
+        }
+    }
+<span class="fc" id="L17">    return -1</span>
+}
+
+fun maximumTransferPer(name: String, transferAmount: Int, transferAmountMonth: Int): Boolean {
+
+<span class="pc bpc" id="L22" title="6 of 16 branches missed.">    when (name) {</span>
+<span class="fc bfc" id="L23" title="All 4 branches covered.">        &quot;MasterCart&quot;, &quot;Maestro&quot;, &quot;Visa&quot;, &quot;Mir&quot; -&gt; if (transferAmountMonth &lt; 600_000 &amp;&amp; transferAmount &lt; 150_000) {</span>
+<span class="fc" id="L24">            return true</span>
+        }
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        &quot;VK Play&quot; -&gt; if (transferAmountMonth &lt; 40_000 &amp;&amp; transferAmount &lt; 15_000) {</span>
+<span class="fc" id="L27">            return true</span>
+        }
+    }
+<span class="fc" id="L30">    return false</span>
+}
+
+fun commissionAmount(name: String, transferAmount: Int, transferAmountMonth: Int): Int {
+<span class="pc bpc" id="L34" title="7 of 13 branches missed.">    when (name) {</span>
+<span class="pc bpc" id="L35" title="1 of 6 branches missed.">        &quot;MasterCart&quot;, &quot;Maestro&quot; -&gt; return if (transferAmount + transferAmountMonth in 300..75_000) {</span>
+<span class="fc" id="L36">            0</span>
+<span class="fc" id="L37">        } else ((transferAmount * 0.6 / 100) + 20).toInt()</span>
+
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        &quot;Visa&quot;, &quot;Mir&quot; -&gt; return if (35 &lt; (transferAmount / 100 * 0.75)) {</span>
+<span class="nc" id="L40">            (transferAmount / 100 * 0.75).toInt()</span>
+<span class="fc" id="L41">        } else 35</span>
+    }
+<span class="nc" id="L43">    return 0</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
