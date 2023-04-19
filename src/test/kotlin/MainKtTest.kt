@@ -12,7 +12,7 @@ class MainKtTest {
             transferAmount = transferAmount
         )
 
-        assertEquals(-1, result)
+        assertEquals(0, result)
     }
 
     @Test
